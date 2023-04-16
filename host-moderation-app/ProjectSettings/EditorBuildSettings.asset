@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/1_Launcher.unity
+    guid: 107450c9a9319ae4e89daf043cb6cdb3
+  - enabled: 1
+    path: Assets/Scenes/EntrypointScene.unity
+    guid: baf5c262edaa64bcba8345b9e8122815
+  - enabled: 1
+    path: Assets/Scenes/AddParticipantScene.unity
+    guid: 7607c2d472e5240dc8bcd5db36c354a2
+  - enabled: 1
+    path: Assets/Scenes/GenerateDebriefingScene.unity
+    guid: c1885301b670a4c72b52be65e4bc40fa
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: c29d48fb4b61e4496bcdc69bd2c092b7
+  - enabled: 1
+    path: Assets/Scenes/PickPreviousSimulationScene.unity
+    guid: fc5792c4366564884a3584f19918be31
+  - enabled: 1
+    path: Assets/Scenes/PickScenarioScene.unity
+    guid: 0ee7ce51d59a140fcb5ee1775d8d4e3c
+  - enabled: 1
+    path: Assets/Scenes/PreviousSimulationScene.unity
+    guid: 0ea2d9ee1c8f043688d02d95dd058553
+  - enabled: 1
+    path: Assets/Scenes/ReviewSimulationScene.unity
+    guid: 67a262ad31adb4e88a4d17d1af130b04
+  - enabled: 1
+    path: Assets/Scenes/WatchDebriefingScene.unity
+    guid: f151494a05f8d7347a97644cbea09c27
+  - enabled: 1
+    path: Assets/Scenes/PickMasterDeviceScene.unity
+    guid: 530c079060ed19246b36c1d4dbdd13ea
+  - enabled: 1
+    path: Assets/Scenes/SettingsScene.unity
+    guid: 1f4900bda60a841a780c2d5da9e334b0
+  m_configObjects: {}
