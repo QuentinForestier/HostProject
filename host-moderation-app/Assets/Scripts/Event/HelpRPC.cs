@@ -134,6 +134,10 @@ namespace Host.Network
         public void BreakerPanelOpen(bool state)
         {
             // Not used here
+            if(manager != null)
+            {
+                manager.CryptedMessage();
+            }
         }
 
         
