@@ -79,7 +79,7 @@ namespace HostProject.Network
             HostNetworkManager.RegisterRPC(HostNetworkId, 2, "TriggerHelpEvent");
             HostNetworkManager.RegisterRPC(HostNetworkId, 3, "StopSimulation");
             HostNetworkManager.RegisterRPC(HostNetworkId, 4, "StartStreaming");
-            HostNetworkManager.RegisterRPC(HostNetworkId, 5, "SeatsFreeNotification");
+            HostNetworkManager.RegisterRPC(HostNetworkId, 5, "SeatsFreeNotification"); 
             HostNetworkManager.RegisterRPC(HostNetworkId, 6, "SetSwitchState");
             HostNetworkManager.RegisterRPC(HostNetworkId, 7, "BreakerPanelOpen");
             HostNetworkManager.RegisterRPC(HostNetworkId, 8, "CryptedMessage");
@@ -104,19 +104,19 @@ namespace HostProject.Network
         public void Update()
         {
             // Sync the local object
-            if (_isSendingLocalHideContentObject)
+            if(_isSendingLocalHideContentObject)
             {
                 SendLocalTrackedObjectPosition();
             }
 
             // Update the position of the tracked objects
-            foreach (var valuePair in _hideContentGameObjects.ToList())
+            foreach(var valuePair in _hideContentGameObjects.ToList())
             {
                 HideContentObject hideContentObject = valuePair.Value;
                 hideContentObject.GameObject.transform.localPosition = Vector3.Slerp(hideContentObject.GameObject.transform.localPosition, hideContentObject.WantedPosition, Time.deltaTime * 20f);
 
                 // Check if the position has not be updated in a while, delete the element from the scene
-                if (hideContentObject.LastUpdateTime + _maxTimeBeforeDeletion < Time.realtimeSinceStartup)
+                if(hideContentObject.LastUpdateTime + _maxTimeBeforeDeletion < Time.realtimeSinceStartup)
                 {
                     Destroy(hideContentObject.GameObject);
                     _hideContentGameObjects.Remove(valuePair.Key);
@@ -136,7 +136,7 @@ namespace HostProject.Network
             float z = BitConverter.ToSingle(data, 16);
 
             // Updates the position or instantiate in the list of tracked objects
-            if (_hideContentGameObjects.ContainsKey(playerId))
+            if(_hideContentGameObjects.ContainsKey(playerId))
             {
                 _hideContentGameObjects[playerId].WantedPosition = new Vector3(x, y, z);
                 _hideContentGameObjects[playerId].LastUpdateTime = Time.realtimeSinceStartup;

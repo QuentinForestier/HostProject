@@ -35,8 +35,7 @@ public class RoomRPC : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("[RoomRPC] : Awakening");
-        if (!_rpcInitDone)
+        if(!_rpcInitDone)
         {
             InitRpc();
         }
@@ -48,7 +47,6 @@ public class RoomRPC : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("[HostNetworkManager] : Starting");
         UnityEngine.WSA.Application.windowActivated += Application_windowActivated;
     }
 

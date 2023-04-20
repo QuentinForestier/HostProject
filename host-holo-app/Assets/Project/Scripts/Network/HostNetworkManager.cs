@@ -51,7 +51,6 @@ namespace Host.Network
 
         public void Awake()
         {
-            Debug.Log("[HostNetworkManager] : Awakening");
             HostNetwork = this;
             _fmNetworkManager = GetComponent<FMNetworkManager>();
 
@@ -81,7 +80,6 @@ namespace Host.Network
 
         public void Start()
         {
-            Debug.Log("[HostNetworkManager] : Starting");
             if (!_serverFound && IsClient)
             {
                 Invoke("CheckConnectedToUdpServer", 1f);
@@ -114,7 +112,6 @@ namespace Host.Network
                 }
                 else
                 {
-                    Debug.Log("Checking for a server...");
                     Invoke("CheckConnectedToUdpServer", 1f);
                 }
             }

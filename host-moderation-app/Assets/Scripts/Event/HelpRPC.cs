@@ -145,7 +145,7 @@ namespace Host.Network
         public void TriggerCryptedMessage(string message, string pairs)
         {
 
-            HostNetwork.RPC(HostNetworkId, "CryptedMessage", HostNetworkTarget.All, message, pairs);
+            HostNetwork.RPC(HostNetworkId, "CryptedMessage", HostNetworkTarget.Others, message, pairs);
         }
         public void CryptedMessage(string message, string pairs)
         {
