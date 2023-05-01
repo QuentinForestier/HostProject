@@ -58,3 +58,5 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Textures
+[Aa]ssets/Abandoned_Psychiatric_Hospitals/Textures/**/*
